@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+$Soft-blue: hsl(215, 51%, 70%);
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -8,7 +11,6 @@
 .attribution {
   a {
     color: hsl(228, 45%, 44%);
-    
   }
 }
 
@@ -19,10 +21,92 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: hsl(217, 54%, 11%);
+  font-family: 'Outfit', sans-serif;
 }
 
 .container {
- width: 230px;
- height: 400px;
- background-color: aliceblue;
+  width: 200px;
+  height: 370px;
+  background-color: hsl(216, 50%, 16%);
+  padding: 15px;
+  border-radius: 9px;
+
+  img {
+    width: 200px;
+    border-radius: 9px;
+  }
+  h4 {
+    align-self: self-start;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    margin-top: 15px;
+  }
+  h4:hover {
+    color:hsl(178, 100%, 50%);
+    cursor: pointer;
+  }
+  p {
+    font-weight: 300;
+    font-size: 12px;
+    color: $Soft-blue;
+    margin-top: -10px;
+  }
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-bottom: 1px solid hsla(215, 51%, 70%, 0.1);
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  img {
+    width: 9px;
+    margin-right: 3px;
+  }
+
+  .first-span {
+    display: flex;
+    align-items: center;
+    span {
+      color: hsl(178, 100%, 50%);
+      font-weight: 400;
+      font-size: 10px;
+    }
+  }
+
+  .second-span {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 12px;
+    }
+    span {
+      font-size: 10px;
+      font-weight: 400;
+      color: $Soft-blue;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  .div-img {
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+  p {
+    padding-top: 18px;
+    padding-left: 8px;
+    span{
+      color: white;
+    }
+    span:hover {
+     color:hsl(178, 100%, 50%) ; 
+     cursor: pointer;
+    }
+  }
 }
