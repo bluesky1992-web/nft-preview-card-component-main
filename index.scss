@@ -31,18 +31,49 @@ body {
   padding: 15px;
   border-radius: 9px;
 
-  img {
-    width: 200px;
-    border-radius: 9px;
+  .image-container {
+    position: relative;
+    .view-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20%;
+      visibility: hidden;
+    }
+
+    img {
+      border-radius: 9px;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 9px;
+      transition: 0.2s ease;
+    }
+    &:hover .view-image {
+      visibility: visible;
+    }
+    &:hover .overlay {
+      opacity: 0.4;
+      background-color: #018b9699;
+    }
   }
+
   h4 {
     align-self: self-start;
     color: hsl(0, 0%, 100%);
     font-weight: 600;
-    margin-top: 15px;
   }
   h4:hover {
-    color:hsl(178, 100%, 50%);
+    color: hsl(178, 100%, 50%);
     cursor: pointer;
   }
   p {
@@ -101,12 +132,12 @@ footer {
   p {
     padding-top: 18px;
     padding-left: 8px;
-    span{
+    span {
       color: white;
     }
     span:hover {
-     color:hsl(178, 100%, 50%) ; 
-     cursor: pointer;
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
     }
   }
 }
